@@ -1,29 +1,45 @@
 # vuex-simplify-action-demo
 
-## Project setup
+## 项目初始化
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 项目启动
+
 ```
-npm run serve
+npm start
 ```
 
-### Compiles and minifies for production
+### decorators 支持配置
+
+1. 安装 @babel/plugin-proposal-decorators
+
 ```
-npm run build
+npm i @babel/plugin-proposal-decorators -D
 ```
 
-### Run your tests
+2. babel.config.js 配置 plugins
+
 ```
-npm run test
+plugins: [
+  [
+    '@babel/plugin-proposal-decorators',
+    {
+      legacy: true
+    }
+  ]
+]
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+3. .eslintrc.js 配置 parserOptions
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+parserOptions: {
+  parser: 'babel-eslint',
+  ecmaFeatures: {
+    legacyDecorators: true
+  }
+}
+```
