@@ -1,7 +1,11 @@
 const api = [
   {
-    fn: 'login',
-    url: '/loginweb/login.do'
+    fn: 'getfoo',
+    url: '/mock/getfoo.json'
+  },
+  {
+    fn: 'getbar',
+    url: '/mock/getbar.json'
   }
 ];
 
