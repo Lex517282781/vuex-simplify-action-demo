@@ -1,15 +1,20 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+import home from '@/views/home/store';
+
+Vue.use(Vuex);
+
+let common = {
+  state: {},
+  getters: {},
+  mutations: {},
+  actions: {}
+};
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+  ...common,
   modules: {
+    home
   }
-})
+});
