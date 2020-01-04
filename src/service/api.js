@@ -6,6 +6,10 @@ const api = [
   {
     fn: 'getbar',
     url: '/mock/getbar.json'
+  },
+  {
+    fn: 'getbaz',
+    url: '/mock/getbaz.json'
   }
 ];
 
